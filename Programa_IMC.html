@@ -1,0 +1,236 @@
+<meta charset="UTF-8">
+
+
+<h2>PROGRAMA CALCULAR IMC</h2>
+
+<script>
+ 	
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir (frase) {
+
+		document.write(frase);
+		saltarlinea();
+	}
+
+	
+
+	function calcularIMC(peso,altura,nombre) {
+
+		imc = peso / (altura * altura);
+		//retunr(imc);
+		imprimir ("El imc calculado de " + nombre + " es : " + Math.round(imc));
+		
+
+	}
+	
+	calcularIMC(85,1.84,"Sergio");
+	calcularIMC(75,1.90,"Felipe");
+
+
+
+	//pesoSergio = 85
+	//alturaSergio = 1.84
+
+	//pesoFelipe = 75
+	//alturaFelipe = 1.90
+	
+	// formula de abajo leo imcSergio = pesoSergio / (alturaSergio * alturaSergio)
+
+	//imcSergio = calcularIMC(pesoSergio,alturaSergio);
+	//imprimir("El IMC de Sergio es: " + imcSergio)
+
+	//imcFelipe = calcularIMC(pesoFelipe,alturaFelipe);
+	//imprimir("El IMC de Felipe es: " + imcFelipe)
+
+
+	//pesoFelipe = 75
+	//alturaFelipe = 1.90
+	//imcFelipe = pesoFelipe / (alturaFelipe * alturaFelipe)
+
+	//imprimir("El IMC de Felipe es: " + imcFelipe)
+
+	
+
+</script>
+
+<h2>PROGRAMA CALCULAR IMC - Forma Larga </h2>
+
+<script>
+ 	
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir (frase) {
+
+		document.write(frase);
+		saltarlinea();
+	}
+
+	
+	function calcularIMC(peso1,altura1,nombre1,peso2,altura2,nombre2) {
+
+		imc1 = peso1 / (altura1 * altura1);
+		imc2 = peso2 / (altura2 * altura2);
+
+		
+		imprimir ("El promedio de imc calculado de " + nombre1 + " y " + nombre2 +" es : " + (imc1 + imc2)/2);
+	
+	}
+	
+	calcularIMC(85,1.84,"Sergio",75,1.90,"Felipe");
+
+	calcularIMC(60,1.84,"Gabriela",80,1.90,"Luisa");
+	
+	
+
+</script>
+
+<h2>PROGRAMA CALCULAR IMC - Forma Eficiente </h2>
+
+<script>
+ 	
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir (frase) {
+
+		document.write(frase);
+		saltarlinea();
+	}
+
+	
+	function calcularIMC(peso,altura,) {
+
+		imc = peso / (altura * altura);
+		
+		return (imc)
+
+	}
+	
+	var imcSergio = calcularIMC(85,1.84)
+	var imcFeliper = calcularIMC(75,1.90)
+
+
+	imprimir ( "El promedio del imc calculado de Sergio y Felipe es : " + (imcSergio + imcFeliper)/2);
+	
+	
+
+</script>
+
+<h2>PROGRAMA CALCULAR IMC - Forma Mucho mas Eficiente </h2>
+
+<script>
+ 	
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir (frase) {
+
+		document.write(frase);
+		saltarlinea();
+	}
+
+	
+	function calcularIMC(peso,altura,) {
+
+		
+		return (peso / (altura * altura));
+
+	}
+	
+	imprimir ( "El promedio del imc calculado de Sergio y Felipe es : " + (calcularIMC(85,1.84) + calcularIMC(75,1.90))/2);
+	imprimir ( "El promedio del imc calculado de Gabriela y Luisa es : " + (calcularIMC(70,1.60) + calcularIMC(100,2.00))/2);
+	
+
+
+</script>
+
+<h2>PROGRAMA CALCULAR IMC - Forma Mucho mas Eficiente </h2>
+
+<script>
+ 	
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir (frase) {
+
+		document.write(frase);
+		saltarlinea();
+	}
+
+	
+	function calcularIMC(peso,altura,) {
+
+		
+		return (peso / (altura * altura));
+
+	}
+	
+	nombre = prompt("informe su nombre");
+	pesoInformado = prompt(nombre + ", informe su peso");
+	alturaInformada = prompt(nombre + ", informe su altura");
+
+	imcCalculado = calcularIMC(pesoInformado,alturaInformada);
+
+
+	imprimir(nombre + ", su imc calculado es " + imcCalculado);
+
+
+	if (imcCalculado < 18.5) {
+
+		imprimir("IMC abajo de lo recomendado");
+	}
+	
+	
+	if (imcCalculado >= 18.5) {
+		
+		if (imcCalculado < 25) {
+			
+			imprimir("IMC dentro del intervalo normal");
+		
+		}
+	}
+	
+	if (imcCalculado >= 25) {
+		
+		if (imcCalculado < 30) {
+			
+			imprimir("IMC considerado como sobrepeso");
+		
+		}
+	}
+
+	if (imcCalculado >= 30) {
+
+		imprimir("IMC considerado como Obesidad");
+	}
+
+
+</script>
